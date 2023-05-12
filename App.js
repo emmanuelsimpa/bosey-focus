@@ -25,33 +25,33 @@ export default function App() {
     setFocusedHistory([]);
   };
 
-  const saveFocusedHistory = async () => {
-    try {
-      await localStorage.setItem("focus", JSON.stringify(focusHistory));
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const saveFocusedHistory = async () => {
+  //   try {
+  //     await localStorage.setItem("focus", JSON.stringify(focusHistory));
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  const loadFocusedHistory = async () => {
-    try {
-      const response = await localStorage.getItem("focus");
-      console.log("ln 38", response);
-      if (response && JSON.parse(response.length)) {
-        setFocusedHistory(JSON.parse(response));
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const loadFocusedHistory = async () => {
+  //   try {
+  //     const response = await localStorage.getItem("focus");
+  //     console.log("ln 38", response);
+  //     if (response && JSON.parse(response.length)) {
+  //       setFocusedHistory(JSON.parse(response));
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    loadFocusedHistory();
-  }, []);
+  // useEffect(() => {
+  //   loadFocusedHistory();
+  // }, []);
 
-  useEffect(() => {
-    saveFocusedHistory();
-  }, [focusHistory]);
+  // useEffect(() => {
+  //   saveFocusedHistory();
+  // }, [focusHistory]);
 
   return (
     <View style={styles.container}>

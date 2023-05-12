@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Platform, StyleSheet, Text, Vibration, View } from "react-native";
 import { paddingSize } from "../../utils/sizes";
 import { Countdown } from "../../component/Countdown";
